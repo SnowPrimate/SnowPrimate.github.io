@@ -9,7 +9,10 @@
 
         <img 
           id="sun" 
-          src="sun.jpg">
+          src="sun.jpg"
+          material = "shader:standard;color:yellow;
+         emissive:yellow;emissiveIntensity:2"
+          >
 
         <img 
           id="mercury"
@@ -49,10 +52,9 @@
         src="#sun"
         color="#F5C85D"
         position="-8 1.6 -2" 
-        radius="7"
-        emissive="#f2de02"></a-sphere>
+        radius="7"></a-sphere>
                           
-        <a-light type="point" position="-20 1.6 -5" ></a-light>
+        <a-light type="point" position="-8 1.6 -5" ></a-light>
 
       <!-- Mercury -->
       <a-sphere
