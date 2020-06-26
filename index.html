@@ -41,6 +41,20 @@
           <img id="sky"
           src="sky2.jpg" transparent="true">
         <audio id="ambient" src="Ambient.mp3" loop="true" preload="auto"></audio>
+        
+        <script src="/path/to/howler.js"></script>
+<script>
+    var sound = new Howl({
+  src: ['sound.webm', 'Ambient.mp3'],
+  onplayerror: function() {
+    sound.once('unlock', function() {
+      sound.play();
+    });
+  }
+});
+
+sound.play();
+</script>
           
       </a-assets>
       <a-entity></a-entity>
