@@ -42,13 +42,17 @@
           src="sky2.jpg" transparent="true">
         <audio 
       id="background"
-      src="Ambient.mp3"></audio>
+      src="Ambient.mp3"
+      refDistance = 20
+      rollOffFactor=0.05></audio>
 </script>
           
       </a-assets>
        <a-sound 
     src="#background"
-    autoplay="true"></a-sound>
+    autoplay="true"
+    refDistance = 20
+      rollOffFactor=0.05></a-sound>
       <a-entity></a-entity>
       <a-sky src="#sky"></a-sky>
       <a-sphere 
@@ -57,7 +61,8 @@
         position="-8 1.55 -2" 
         radius="7"
         material = "shader: flat"
-        sound="src: #ambient; on: click; volume: 1; refDistance: 20; rolloffFactor: 0.1"></a-sphere>
+        sound = "src: #background; refDistance: 300;
+      rollOffFactor: 0.05;"></a-sphere>
                           
         <a-light type="point" position="-8 1.6 -5" ></a-light>
 
